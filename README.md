@@ -27,8 +27,6 @@ git clone https://github.com/yourusername/ytsum.git
 cd ytsum
 ```
 
-Or unzip the provided folder if you received a `ytsum.zip`.
-
 ---
 
 ### 2. Install dependencies
