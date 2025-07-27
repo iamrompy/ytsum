@@ -1,5 +1,0 @@
-yt-dlp
-faster-whisper
-rich
-requests
-python-dotenv
