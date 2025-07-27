@@ -53,6 +53,21 @@ GEMINI_API_KEY=your_gemini_api_key_here
 
 ### 4. Run the tool
 
+You can either:
+
+**Option A**: Use the auto-setup script (recommended on Windows):
+
+```cmd
+start_ytsum.bat
+```
+
+This will:
+- Create and activate the virtual environment (if not already set up)
+- Install dependencies
+- Prompt you to enter a YouTube URL and run the summarizer
+
+**Option B**: Run manually using Python:
+
 ```bash
 python main.py "https://www.youtube.com/watch?v=your_video_id"
 ```
@@ -101,3 +116,22 @@ Already downloaded or transcribed files are **skipped automatically**.
 ## 🤝 License
 
 MIT — use freely, credit if useful.
+---
+
+## 📁 Project Structure
+
+```
+ytsum/
+├── main.py                   # Entry point to run the tool
+├── yt_downloader.py          # Downloads YouTube audio via yt-dlp
+├── transcriber.py            # Transcribes audio using Whisper Tiny
+├── summarizer.py             # Summarizes transcript using Gemini 2.0 Flash
+├── requirements.txt          # Python dependencies
+├── .env                      # Holds your Gemini API key (should be gitignored)
+├── .gitignore                # Ignores env, output folders, and local artifacts
+├── README.md                 # Documentation and setup guide
+├── start_ytsum.bat           # Windows startup script with auto-venv setup
+├── downloads/                # Audio files downloaded from YouTube (.mp3)
+├── transcripts/              # Transcript text files (.txt)
+└── summaries/                # Summarized output files (sum_*.txt)
+```
